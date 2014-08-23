@@ -9,6 +9,23 @@ class AdocaoController{
 	}
 
 	public function inserir($dados = array()){
+		
+		require_once("AnimalController.php");
+		$animalController = new AnimalController();
+		
+		$animalController->inserir($dados);		
+		
+		$dados['animal_id'] = $animalController->lastId();
+		
+		if(isset($_FILES['foto']) && $_FILES['foto']){
+			$filedir = 'admin/app/webroot/imagens/'.$_FILES['foto']['name'];
+			move_uploaded_file($_FILES['foto']['tmp_name'],$filedir);
+			$dados['foto'] = $_FILES['foto']['name'];
+			$animalController->foto($dados);
+		}
+		
+		$dados['usuario_id'] = $_SESSION['usuario']['usuario_id'];
+		
 		$this->adocaoModel->inserir($dados);
 		$_SESSION['sucesso'] = "Adoção cadastrado com sucesso!";
 	}
@@ -29,7 +46,7 @@ class AdocaoController{
 	
 	public function listar($dados = array()){
 		
-		$this->adocaoModel->listar($dados);
+		return $this->adocaoModel->listar($dados);
 		
 	}
 	

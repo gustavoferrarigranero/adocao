@@ -9,7 +9,9 @@ class AnimalController{
 	}
 
 	public function inserir($dados = array()){
+		
 		$this->animalModel->inserir($dados);
+		
 		$_SESSION['sucesso'] = "Animal cadastrado com sucesso!";
 	}
 	

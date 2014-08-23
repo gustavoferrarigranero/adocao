@@ -17,9 +17,10 @@
         <a href="<?php echo URL ?>contato.php">Contato</a>
         <div class="usuario">
 			<?php  
+			//var_dump($_SESSION['usuario']);
             if(isset($_SESSION['usuario']) && $_SESSION['usuario']){
                 ?>
-                <span>Bem vindo(a)</span> <a href="<?php echo URL ?>minhaconta.php"><?php echo $_SESSION['usuario']['nome'] ?></a><span>, acesse </span><a href="<?php echo URL ?>minha-conta.php">sua conta</a>|<a href="<?php echo URL ?>logout.php">sair</a>
+                <span>Bem vindo(a)</span> <a href="<?php echo URL ?>minha-conta.php"><?php echo $_SESSION['usuario']['nome'] ?></a><span>, acesse </span><a href="<?php echo URL ?>minha-conta.php">sua conta</a>|<a href="<?php echo URL ?>logout.php">sair</a>
                 <?php
             }else{
                 ?>

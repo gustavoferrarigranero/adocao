@@ -28,7 +28,7 @@ class AdocaoModel{
 	
 	public function listar($dados = array()){
 		
-		return $this->connection->query("SELECT * FROM `adocoes`");
+		return $this->connection->query("SELECT a.`adocao_id`,a.`usuario_id`,a.`local`,a.`cidade`, a.`status`,an.* FROM `adocoes` a INNER JOIN animais an ON an.animal_id=a.animal_id");
 		
 	}	
 	
