@@ -19,11 +19,11 @@
 			<?php  
             if(isset($_SESSION['usuario']) && $_SESSION['usuario']){
                 ?>
-                <span>Bem vindo(a)</span> <a href="<?php echo URL ?>minhaconta.php"><?php echo $_SESSION['usuario']['nome'] ?></a><span>, acesse </span><a href="<?php echo URL ?>minha-conta.php">sua conta</a>. | <a href="<?php echo URL ?>logout.php">sair</a>
+                <span>Bem vindo(a)</span> <a href="<?php echo URL ?>minhaconta.php"><?php echo $_SESSION['usuario']['nome'] ?></a><span>, acesse </span><a href="<?php echo URL ?>minha-conta.php">sua conta</a>|<a href="<?php echo URL ?>logout.php">sair</a>
                 <?php
             }else{
                 ?>
-                <a href="<?php echo URL ?>cadastro.php">Cadastre-se</a> &nbsp;&nbsp; ou &nbsp;&nbsp; <a href="<?php echo URL ?>login.php">Login</a>
+                <a href="<?php echo URL ?>cadastro.php">Cadastre-se</a>ou<a href="<?php echo URL ?>login.php">Login</a>
                 <?php	
             }
             ?>

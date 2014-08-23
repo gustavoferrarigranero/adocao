@@ -43,7 +43,7 @@ a:hover{
 }
 #centro #menu .usuario a{
 	color:#FFFFFF;
-	font-size:16px;	
+	font-size:12px;	
 	font-weight:bold;
 }
 #centro #menu .usuario span{
@@ -114,6 +114,8 @@ a:hover{
 	background:#000;
 	opacity:0.9;
 	text-align:left;
+	color:#FFF;
+	text-align:center;
 }
 
 

@@ -62,9 +62,6 @@ require_once("view/header.php");
                     CEP: <br /><input type="text" name="cep" value="<?php echo $_SESSION['usuario']['cep'] ?>" /><br /><br />
                     Telefone: <br /><input type="text" name="telefone" value="<?php echo $_SESSION['usuario']['telefone'] ?>" /><br /><br />
                     Celular: <br /><input type="text" name="celular" value="<?php echo $_SESSION['usuario']['celular'] ?>" /><br /><br />
-                    <?php if($_SESSION['usuario']['foto']){ ?>
-                    	<img width="200" src="admin/app/webroot/imagens/usuarios/<?php echo $_SESSION['usuario']['foto'] ?>"  /> <br />
-                    <?php } ?>
                     Email: <br /><input type="text" name="email" value="<?php echo $_SESSION['usuario']['email'] ?>" /><br /><br />
                     Senha: <br /><input type="password" name="senha" value="<?php echo $_SESSION['usuario']['senha'] ?>" />
                 </td>
