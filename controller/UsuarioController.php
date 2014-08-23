@@ -22,13 +22,6 @@ class UsuarioController{
 	public function alterar($dados = array()){
 		
 		if($this->usuarioModel->alterar($dados)){
-			if($_FILES['foto']['name']){
-				$filedir = 'admin/app/webroot/imagens/usuarios/'.$_FILES['foto']['name'];
-				move_uploaded_file($_FILES['foto']['tmp_name'],$filedir);
-				$ds['id'] = $dados['id'];
-				$ds['foto'] = $_FILES['foto']['name'];
-				$this->foto($ds);
-			}
 			$_SESSION['sucesso'] = "Dados alterados com sucesso!";
 			$_SESSION['usuario'] = $this->usuarioModel->retornaUsuario($_SESSION['usuario']['id'])->row;
 		}

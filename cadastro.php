@@ -5,14 +5,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 	$controller = new UsuarioController();
 	$controller->inserir($_POST);
 
-	if(isset($_FILES['foto']) && $_FILES['foto']){
-
-		$filedir = 'admin/app/webroot/imagens/usuarios/'.$_FILES['foto']['name'];
-		move_uploaded_file($_FILES['foto']['tmp_name'],$filedir);
-		$dados['id'] = $controller->lastId();
-		$dados['foto'] = $_FILES['foto']['name'];
-		$controller->foto($dados);
-	}
 	header("Location: ". URL.'login.php');
 	exit();
 }
@@ -68,7 +60,6 @@ require_once("view/header.php");
                     CEP: <br /><input type="text" name="cep" value="" /><br /><br />
                     Telefone: <br /><input type="text" name="telefone" value="" /><br /><br />
                     Celular: <br /><input type="text" name="celular" value="" /><br /><br />
-                    Foto(opcional): <br /><input type="file" name="foto" value="" /><br /><br />
                     Email: <br /><input type="text" name="email" value="" /><br /><br />
                     Senha: <br /><input type="password" name="senha" value="" />
                     <input type="hidden" name="status" value="1" />

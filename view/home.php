@@ -1,39 +1,29 @@
     <div id="meio">
-    	<div class="coluna">
+    	<a href="<?php echo URL ?>adocoes.php"><div class="coluna">
         	<div class="titulo">
-            	Doa para crianças
+            	Adote um Animal
             </div>
-            <img src="view/imagens/banner-1.jpg" width="290" height="130" />
             <div class="texto">
-       	 		jhdfasjkdhjkadhasj kjasdha jksdh asj dhasjdhasjkdh adjkas   jsadhjasd  sadjhsajk dhasjkdh  kjasdhajks daskjd kd hasjkdhasjkdh as aj asdh asjkdh a as asjkdh ajdhajksdasjk d asjdhasjdh asdjh js adjk asdh ajkd haskjd hasjdh asjkdasjkd.
+       	 		[Edite este texto e troque a imagem conforme desejar]
         	</div>
-            <a href="#"><div class="leia">Leia mais</div></a>
-        </div>
-        <div class="coluna">
+            <img src="view/imagens/banner-1.jpg" width="290" height="160" />
+        </div></a>
+        <a href="<?php echo URL ?>perdidos.php"><div class="coluna">
         	<div class="titulo">
-            	Doa para famílias
+            	Animais Perdidos
             </div>
-            <img src="view/imagens/banner-2.jpg" width="290" height="130" />
             <div class="texto">
-       	 		jhdfasjkdhjkadhasj kjasdha jksdh asj dhasjdhasjkdh adjkas   jsadhjasd  sadjhsajk dhasjkdh  kjasdhajks daskjd kd hasjkdhasjkdh as aj asdh asjkdh a as asjkdh ajdhajksdasjk d asjdhasjdh asdjh js adjk asdh ajkd haskjd hasjdh asjkdasjkd.
+       	 		[Edite este texto e troque a imagem conforme desejar]
         	</div>
-            <a href="#"><div class="leia">Leia mais</div></a>
-        </div>
-        <div class="coluna">
+            <img src="view/imagens/banner-1.jpg" width="290" height="160" />            
+        </div></a>
+        <a href="<?php echo URL ?>quem-somos.php"><div class="coluna">
         	<div class="titulo">
-            	Últimas noticias
+            	Quem Somos
             </div>
-            <img src="view/imagens/banner-1.jpg" width="290" height="130" />
             <div class="texto">
-       	 		jhdfasjkdhjkadhasj kjasdha jksdh asj dhasjdhasjkdh adjkas   jsadhjasd  sadjhsajk dhasjkdh  kjasdhajks daskjd kd hasjkdhasjkdh as aj asdh asjkdh a as asjkdh ajdhajksdasjk d asjdhasjdh asdjh js adjk asdh ajkd haskjd hasjdh asjkdasjkd.
+       	 		[Edite este texto e troque a imagem conforme desejar]
         	</div>
-            <a href="#"><div class="leia">Leia mais</div></a>
-        </div>
-        <div class="azul">
-        	<a href="#"><div class="facebook">Acompanhe nossa página no facebook.</div></a>
-            <div class="newsletter">
-            	<input type="text" value="" placeholder="seu email..." />
-            	<div class="botao">OK</div>
-            </div>
-        </div>
+            <img src="view/imagens/banner-1.jpg" width="290" height="160" />
+        </div></a>
     </div>

@@ -55,12 +55,6 @@ class UsuarioModel{
 		
 	}
 	
-	public function foto($dados = array()){
-		
-		return $this->connection->query("UPDATE `usuarios` SET `foto` = '".$this->connection->escape($dados['foto'])."' WHERE id = ".(int)$dados['id'].";");
-		
-	}
-	
 	public function lastId(){
 		
 		return $this->connection->getLastId();

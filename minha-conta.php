@@ -65,7 +65,6 @@ require_once("view/header.php");
                     <?php if($_SESSION['usuario']['foto']){ ?>
                     	<img width="200" src="admin/app/webroot/imagens/usuarios/<?php echo $_SESSION['usuario']['foto'] ?>"  /> <br />
                     <?php } ?>
-                    Foto(opcional): <br /><input type="file" name="foto" value="" /><br /><br />
                     Email: <br /><input type="text" name="email" value="<?php echo $_SESSION['usuario']['email'] ?>" /><br /><br />
                     Senha: <br /><input type="password" name="senha" value="<?php echo $_SESSION['usuario']['senha'] ?>" />
                 </td>

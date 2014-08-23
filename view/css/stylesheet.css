@@ -1,7 +1,7 @@
 body{
-	background:#000;
+	background:#FFF;
 	font-size:12px;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:Verdana, Geneva, sans-serif;
 	padding:0px;
 	margin:0px;	
 }
@@ -21,45 +21,43 @@ a:hover{
 	width:1003px;
 	margin:auto;	
 }
+#centro .a-logo{text-decoration:none;}
 #centro .logo{
-	float:left;
+	width:1003px;
+	height:290px;
+	background:url(../imagens/header-back.jpg) no-repeat center;
 	font-size:40px;
-	color:#2D6F8C;	
+	color:#FF8204;	
 	margin:15px 0px 0px 0px;
 }
 #centro .logo span{
 	font-size:40px;
 	color:#FFFFFF;	
 }
-#centro .usuario{
-	color:#2D6F8C;	
+#centro #menu .usuario{
+	display:inline-block;
+	float:right;
+	color:#FFF;	
 	float:right;	
-	margin:40px 0px 0px 0px;
+	margin:0px 10px 0px 0px;
 }
-#centro .usuario a{
+#centro #menu .usuario a{
 	color:#FFFFFF;
+	font-size:16px;	
+	font-weight:bold;
+}
+#centro #menu .usuario span{
 	font-size:14px;	
 }
-#centro .usuario span{
-	font-size:14px;	
-}
-#centro #banner{
-	width:1003px;
-	height:400px;	
-	margin-top:10px;
-	position:relative;
-}
-#centro #banner #menu{
+#centro #menu{
 	width:1003px;
 	height:40px;	
 	line-height:40px;
-	position:absolute;
-	bottom:0px;
 	background:#000;
 	opacity:0.9;
 	text-align:left;
 }
-#centro #banner #menu a{
+#centro #menu a{
 	color:#FFF;
 	padding:14px 15px;
 }
@@ -70,6 +68,7 @@ a:hover{
 	position:relative;
 }
 #centro #meio .coluna{
+	color:#000;
 	float:left;
 	width:290px;
 	height:315px;
@@ -82,7 +81,7 @@ a:hover{
 	text-align:left;
 	font-size:16px;
 	font-weight:bold;
-	border-bottom:2px dotted #000;
+	color:#FF8204;
 }
 #centro #meio .coluna .texto{
 	margin:5px 0px 0px 0px;
@@ -90,220 +89,10 @@ a:hover{
 	font-size:11px;
 	font-weight:bold;
 }
-#centro #meio .coluna .leia{
-	color:#FFFFFF;
-	text-align:center;
-	position:absolute;
-	bottom:10px;
-	left:0;
-	width:100px;
-	height:30px;	
-	line-height:30px;
-	font-weight:bold;
-	border-radius:5px;
-	background:#0B9DE2;
-}
-#centro #meio .azul{
-	width:1003px;
-	height:60px;	
-	background:#0B9DE2;
-	position:absolute;
-	bottom:0;
-	color:#FFF;
-}
-#centro #meio .azul a{
-	text-decoration:none;
-}
-#centro #meio .azul a .facebook{
-	float:left;
-	width:400px;
-	height:45px;
-	line-height:45px;
-	color:#FFFFFF;
-	font-size:20px;	
-	font-weight:bold;
-	margin:7px 0px 0px 0px;
-	padding:0px 0px 0px 55px;
-	background:url(../imagens/facebook-icon.png) 15px center no-repeat;
-}
-#centro #meio .azul .newsletter{
-	float:right;
-	width:300px;
-	height:45px;
-	line-height:45px;
-	color:#FFFFFF;
-	font-size:20px;	
-	font-weight:bold;
-	margin:7px 0px 0px 0px;
-	position:relative;
-	padding:0px 0px 0px 200px;
-	background:url(../imagens/newsletter-icon.png) no-repeat left 3px;
-}
-#centro #meio .azul .newsletter .botao{
-	float:right;
-	width:60px;
-	height:75px;
-	line-height:75px;
-	position:absolute;
-	right:20px;
-	top:-14px;
-	background:url(../imagens/newsletter-ok.png) no-repeat center;
-	text-align:center;
-	cursor:pointer;
-	z-index: 999;
-}
-#centro #meio .azul .newsletter input{
-	width:180px;
-	margin:7px 0px 7px 10px;
-	height:25px;
-	background:#FFF;
-	border-radius:4px;
-}
-#centro #conteudo{
-	width:1003px;
-	height:350px;	
-	background:url(../imagens/meio-sombra.png) repeat-x top;
-	position:relative;
-}
-#centro #conteudo .doacoes{
-	color:#FFF;
-	margin-top:60px;
-	float:left;
-	width:320px;
-	height:300px;	
-}
-#centro #conteudo .doacoes .titulo{
-	color:#FFFFFF;
-	height:25px;
-	margin:0px 0px 10px 0px;
-	text-align:left;
-	font-size:18px;
-	font-weight:bold;
-	border-bottom:2px dotted #FFF;
-}
-#centro #conteudo .doacoes .linha{
-	color:#FFFFFF;
-	height:25px;
-	line-height:25px;
-	margin:5px 0px 5px 0px;
-	text-align:left;
-	font-size:14px;
-	padding:0px 10px;
-	border-bottom:1px solid #1F1F1F;
-	border-right:1px solid #1F1F1F;
-	background:#333;
-}
-#centro #conteudo .doacoes .linha span{
-	font-weight:bold;
-	color:#06F;
-}
-#centro #conteudo .depoimentos{
-	margin-top:60px;
-	float:right;
-	width:650px;
-	height:300px;	
-}
-#centro .centro-login{
-	width:1003px;
-	min-height:500px;	
-	background:#FFF;
-}
-#centro .centro-login table{
-	font-size:12px;
-	margin:auto;	
-	padding:35px 0 0 0;
-}
-#centro #desejos{
-	width:1003px;
-	min-height:500px;	
-	background:#FFF;
-}
-#centro  #desejos .ultimos-desejos{
-	width:450px;
-	min-height:300px;
-	padding:10px;
-}
-#centro  #desejos .ultimos-desejos .titulo{
-	color:#333;
-	height:25px;
-	margin:0px 0px 10px 0px;
-	text-align:left;
-	font-size:18px;
-	font-weight:bold;
-	border-bottom:2px dotted #333;
-}
-#centro  #desejos .ultimos-desejos .linha{
-	width:430px;
-	color:#FFFFFF;
-	line-height:25px;
-	margin:5px 0px 5px 0px;
-	text-align:left;
-	font-size:14px;
-	padding:10px;
-	background:#333;
-	position:relative;
-	word-wrap:break-word;
-}
-#centro  #desejos .ultimos-desejos .linha .atender{
-	padding:5px 10px;
-	background:#0C6;
-	color:#FFF;
-	position:absolute;
-	top:0px;
-	right:0px;
-}
 
-
-#centro #doacoes{
-	width:1003px;
-	min-height:500px;	
-	background:#FFF;
-}
-#centro  #doacoes .ultimas-doacoes{
-	width:520px;
-	min-height:300px;
-	padding:10px;
-}
-#centro  #doacoes .ultimas-doacoes .titulo,#centro  #doacoes .nova-doacao .titulo{
-	color:#333;
-	height:25px;
-	margin:0px 0px 10px 0px;
-	text-align:left;
-	font-size:18px;
-	font-weight:bold;
-	border-bottom:2px dotted #333;
-}
-#centro  #doacoes .ultimas-doacoes .linha{
-	width:500px;
-	color:#FFFFFF;
-	line-height:25px;
-	margin:5px 0px 5px 0px;
-	text-align:left;
-	font-size:14px;
-	padding:10px;
-	background:#333;
-	position:relative;
-	word-wrap:break-word;
-}
-#centro  #doacoes .ultimas-doacoes *{
-	font-size:14px;	
-}
-#centro  #doacoes .ultimas-doacoes .linha .atender{
-	padding:5px 10px;
-	background:#0C6;
-	color:#FFF;
-	position:absolute;
-	top:0px;
-	right:0px;
-}
-#centro  #doacoes .nova-doacao{
-	width:350px;
-	min-height:300px;
-	padding:10px;
-}
 #centro #infos{
 	width:983px;
-	min-height:500px;	
+	min-height:300px;	
 	padding:10px;
 	background:#FFF;
 }
@@ -311,16 +100,21 @@ a:hover{
 	font-size:14px;	
 }
 #centro  #infos .titulo{
-	color:#333;
+	color:#FF8204;
 	height:25px;
 	margin:0px 0px 10px 0px;
 	text-align:left;
 	font-size:18px;
 	font-weight:bold;
-	border-bottom:2px dotted #333;
 }
-
-
+#footer{
+	width:1003px;
+	height:40px;	
+	line-height:40px;
+	background:#000;
+	opacity:0.9;
+	text-align:left;
+}
 
 
 
