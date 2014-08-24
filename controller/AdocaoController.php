@@ -27,7 +27,7 @@ class AdocaoController{
 		$dados['usuario_id'] = $_SESSION['usuario']['usuario_id'];
 		
 		$this->adocaoModel->inserir($dados);
-		$_SESSION['sucesso'] = "Adoção cadastrado com sucesso!";
+		$_SESSION['sucesso'] = "Animal para Adoção cadastrado com sucesso!";
 	}
 	
 	public function alterar($dados = array()){
@@ -50,9 +50,35 @@ class AdocaoController{
 		
 	}
 	
+	public function get($adocao_id){
+		
+		return $this->adocaoModel->get($adocao_id);
+		
+	}
+	
 	public function foto($dados = array()){
 		
 		$this->adocaoModel->foto($dados);
+		
+	}
+	
+	public function adotar($adocao_id){
+		
+		$adocao = $this->get($adocao_id)->row;
+		
+		if($adocao){
+		
+			$html = "Olá, você escolheu adotar um animal em nosso site de adoção,o pet escolhido foi: ". $adocao['nome'] .", do local: ". $adocao['local'] .", na cidade: ". $adocao['cidade'] .", para continuar o processo, entre em contato no email: ". EMAIL . " para informações de entrega do pet!";
+			
+			mail($_SESSION['usuario']['email'],"Adoção de Animais",$html);		
+		
+			$this->adocaoModel->adotar($adocao_id);
+			
+			$_SESSION['sucesso'] = "Adoção iniciada! Após receber os dados em seu email entre em contato para agendarmos a entrega do pet!";
+		
+		}else{
+			$_SESSION['erro'] = "Ocorreu um problema ao adotar este animal!";
+		}
 		
 	}
 	

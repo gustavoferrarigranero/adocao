@@ -8,6 +8,14 @@ if(!isset($_SESSION['usuario'])){
 require_once("controller/AdocaoController.php");
 $adocaoController = new AdocaoController();
 
+if(isset($_GET['adocao_id']) && $_GET['adocao_id']){
+	
+	$adocaoController->adotar($_GET['adocao_id']);
+	header("Location: ". URL.'adocoes.php');
+	exit();
+	
+}
+
 require_once("view/header.php");
 ?>
 <script type="text/javascript" src="view/javascript/jquery-ui/external/jquery/jquery.js"></script>
@@ -35,7 +43,17 @@ require_once("view/header.php");
     if($adocoes->num_rows){
         foreach($adocoes->rows as $adocao){?>
         <div class="linha">
-            <strong>Nome:</strong> <?php echo $adocao['nome'] ; ?> <strong>Descrição:</strong> <?php echo $adocao['descricao'] ; ?><br />
+            <strong>Nome:</strong> <?php echo $adocao['nome'] ; ?> <strong>Descrição:</strong> <?php echo $adocao['descricao'] ; ?> 
+            <br /> 
+            <strong>Status da adoção:</strong> 
+            <span>
+            <?php if($adocao['status']==1){ ?>
+            	Animal ja adotado!
+            <?php }else{ ?>
+            	Animal aguardando ser adotado! Adote clicando <a href="<?php echo URL ; ?>adocoes.php?adocao_id=<?php echo $adocao['adocao_id'] ; ?>">aqui!</a>
+            <?php } ?>
+            </span>
+            <br /> 
             <strong>Tipo:</strong> <?php echo $adocao['tipo'] ; ?> <strong>Peso:</strong> <?php echo $adocao['peso'] ; ?> <strong>Pelagem:</strong> <?php echo $adocao['pelagem'] ; ?> <strong>Tamanho:</strong> <?php echo $adocao['tamanho'] ; ?><br />	
             <strong>Local:</strong> <?php echo $adocao['local'] ; ?> <strong>Cidade:</strong> <?php echo $adocao['cidade'] ; ?><br />
             <?php if($adocao['foto']){ ?>
@@ -43,6 +61,7 @@ require_once("view/header.php");
             	<img src="<?php echo URL ?>admin/app/webroot/imagens/<?php echo $adocao['foto'] ; ?>" width="200" />
 			<?php } ?>
             <hr />
+            <br /><br /><br /><br />
         </div>
     <?php
         }
