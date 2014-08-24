@@ -44,6 +44,12 @@ class AdocaoModel{
 		
 	}
 	
+	public function cancelaAdotar($adocao_id){
+		
+		$this->connection->query("UPDATE `adocoes` SET `status` = 0  WHERE adocao_id = ".(int)$adocao_id." ;");
+		
+	}
+	
 	public function lastId(){
 		
 		return $this->connection->getLastId();

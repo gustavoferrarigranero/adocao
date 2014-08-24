@@ -16,6 +16,14 @@ if(isset($_GET['adocao_id']) && $_GET['adocao_id']){
 	
 }
 
+if(isset($_GET['cancela_adocao_id']) && $_GET['cancela_adocao_id']){
+	
+	$adocaoController->cancelaAdotar($_GET['cancela_adocao_id']);
+	header("Location: ". URL.'adocoes.php');
+	exit();
+	
+}
+
 require_once("view/header.php");
 ?>
 <script type="text/javascript" src="view/javascript/jquery-ui/external/jquery/jquery.js"></script>
@@ -48,7 +56,10 @@ require_once("view/header.php");
             <strong>Status da adoção:</strong> 
             <span>
             <?php if($adocao['status']==1){ ?>
-            	Animal ja adotado!
+            	Animal ja adotado! 
+                <?php if($adocao['usuario_id'] == $_SESSION['usuario']['usuario_id']){ ?>
+                Para cancelar sua adoção clique <a href="<?php echo URL ; ?>adocoes.php?cancela_adocao_id=<?php echo $adocao['adocao_id'] ; ?>">aqui!</a>
+                <?php } ?>
             <?php }else{ ?>
             	Animal aguardando ser adotado! Adote clicando <a href="<?php echo URL ; ?>adocoes.php?adocao_id=<?php echo $adocao['adocao_id'] ; ?>">aqui!</a>
             <?php } ?>

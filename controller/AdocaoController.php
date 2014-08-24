@@ -82,6 +82,15 @@ class AdocaoController{
 		
 	}
 	
+	public function cancelaAdotar($adocao_id){
+		
+		
+		$this->adocaoModel->cancelaAdotar($adocao_id);
+		
+		$_SESSION['sucesso'] = "Você cancelou sua adoção com sucesso!";
+		
+	}
+	
 	public function lastId(){
 		
 		return $this->adocaoModel->lastId();
