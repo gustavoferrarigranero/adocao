@@ -48,7 +48,7 @@ require_once("view/header.php");
         	<tr>
             	<td valign="top">
                     Nome: <br /><input type="text" name="nome" value="" /><br /><br />
-                    CPF(maiores de 16 anos): <br /><input type="text" name="cpf" value="" /><br /><br />
+                    CPF(maiores de 16 anos): <br /><input type="text" name="cpf" value="" maxlength="11" />(apenas numeros)<br /><br />
                     RG(maiores de 16 anos): <br /><input type="text" name="rg" value="" /><br /><br />
                     Data de Nascimento: <br /><input type="text" name="dataNascimento" value="" /><br /><br />
                     Endereço: <br /><input type="text" name="endereco" value="" /><br /><br />

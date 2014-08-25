@@ -50,7 +50,7 @@ require_once("view/header.php");
                 	<input type="hidden" name="id" value="<?php echo $_SESSION['usuario']['id'] ?>" />
                     <input type="hidden" name="status" value="1" />
                     Nome: <br /><input type="text" name="nome" value="<?php echo $_SESSION['usuario']['nome'] ?>" /><br /><br />
-                    CPF(maiores de 16 anos): <br /><input type="text" name="cpf" value="<?php echo $_SESSION['usuario']['cpf'] ?>" /><br /><br />
+                    CPF(maiores de 16 anos): <br /><input type="text" name="cpf" value="<?php echo $_SESSION['usuario']['cpf'] ?>" maxlength="11" />(apenas numeros)<br /><br />
                     RG(maiores de 16 anos): <br /><input type="text" name="rg" value="<?php echo $_SESSION['usuario']['rg'] ?>" /><br /><br />
                     Data de Nascimento: <br /><input type="text" name="dataNascimento" value="<?php echo $_SESSION['usuario']['dataNascimento'] ?>" /><br /><br />
                     Endereço: <br /><input type="text" name="endereco" value="<?php echo $_SESSION['usuario']['endereco'] ?>" /><br /><br />

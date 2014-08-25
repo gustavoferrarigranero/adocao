@@ -26,11 +26,29 @@ class PerdidoModel{
 		
 	}
 	
+	public function get($perdido_id){
+		
+		return $this->connection->query("SELECT a.`perdido_id`,a.`usuario_id`,a.`local`,a.`cidade`, a.`status`,an.* FROM `perdidos` a INNER JOIN animais an ON an.animal_id=a.animal_id WHERE a.perdido_id = ".(int)$perdido_id);
+		
+	}
+	
 	public function listar($dados = array()){
 		
-		return $this->connection->query("SELECT * FROM `perdidos`");
+		return $this->connection->query("SELECT a.`perdido_id`,a.`usuario_id`,a.`local`,a.`cidade`, a.`status`,an.* FROM `perdidos` a INNER JOIN animais an ON an.animal_id=a.animal_id");
 		
 	}	
+	
+	public function avisar($perdido_id){
+		
+		$this->connection->query("UPDATE `perdidos` SET `status` = 1  WHERE perdido_id = ".(int)$perdido_id." ;");
+		
+	}
+	
+	public function cancelaAvisar($perdido_id){
+		
+		$this->connection->query("UPDATE `perdidos` SET `status` = 0  WHERE perdido_id = ".(int)$perdido_id." ;");
+		
+	}
 	
 	public function lastId(){
 		

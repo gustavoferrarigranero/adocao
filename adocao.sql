@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 23-Ago-2014 às 22:29
+-- Generation Time: 25-Ago-2014 às 04:53
 -- Versão do servidor: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -34,21 +34,15 @@ CREATE TABLE IF NOT EXISTS `adocoes` (
   `cidade` varchar(100) NOT NULL,
   `status` int(11) NOT NULL,
   PRIMARY KEY (`adocao_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Extraindo dados da tabela `adocoes`
 --
 
 INSERT INTO `adocoes` (`adocao_id`, `usuario_id`, `animal_id`, `local`, `cidade`, `status`) VALUES
-(1, 1, 2, 'Na rua', 'Franca', 0),
-(2, 1, 3, 'Chacara', 'Franca', 0),
-(3, 1, 4, 'sdsad', 'sadasd', 0),
-(4, 1, 5, 'vcxv', 'xcvxv', 0),
-(5, 1, 6, 'vcxv', 'xcvxv', 0),
-(6, 1, 7, 'vcxv', 'xcvxv', 0),
-(7, 1, 8, 'vcxv', 'xcvxv', 0),
-(8, 1, 10, 'dsfsd', 'sdfdsf', 0);
+(11, 1, 13, 'em casa', 'Franca', 1),
+(12, 1, 14, 'na rua', 'Ribeirão Preto', 0);
 
 -- --------------------------------------------------------
 
@@ -60,29 +54,22 @@ CREATE TABLE IF NOT EXISTS `animais` (
   `animal_id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(150) NOT NULL,
   `descricao` varchar(250) NOT NULL,
-  `peso` float NOT NULL,
+  `peso` varchar(50) NOT NULL,
   `pelagem` varchar(100) NOT NULL,
   `tamanho` varchar(100) NOT NULL,
   `foto` varchar(100) NOT NULL,
-  `tipo` int(11) NOT NULL,
+  `tipo` varchar(50) NOT NULL,
   PRIMARY KEY (`animal_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Extraindo dados da tabela `animais`
 --
 
 INSERT INTO `animais` (`animal_id`, `nome`, `descricao`, `peso`, `pelagem`, `tamanho`, `foto`, `tipo`) VALUES
-(1, 'Jack', 'Vira Lata', 30, 'curta', 'medio', '', 1),
-(2, 'Chuck', 'sdasdasdas', 10, 'curta', 'medio', '', 1),
-(3, 'Pet', 'shdskjdhasjdhajskd', 1, 'curta', 'Médio', '', 1),
-(4, 'adasdas', 'asdasdasasdasdasdasdasd', 23, '23', 'Médio', '', 1),
-(5, 'czxc', 'xczxczxc', 343, '232', 'Grande', '', 0),
-(6, 'czxc', 'xczxczxc', 343, '232', 'Grande', '', 0),
-(7, 'czxc', 'xczxczxc', 343, '232', 'Grande', '', 0),
-(8, 'czxc', 'xczxczxc', 343, '232', 'Grande', '', 0),
-(9, 'asdasdasdasd', 'asdasdasdasdas', 23, 'fdfsdf', 'Pequeno', '', 0),
-(10, 'asdasdasdasd', 'asdasdasdasdas', 23, 'fdfsdf', 'Pequeno', '73_1.jpg', 0);
+(13, 'Betowen', 'Animal grande de pelo alto e dócil com os donos.', '55kg', 'Curta e macía', 'Grande', '73_1.jpg', 'Cachorro'),
+(14, 'Titiu', 'Cão vira-latas encontrado andando pela cidade, é dócil e muito quieto.', '15kg', 'Curta', 'Médio', '73_1.jpg', 'Cachorro'),
+(15, 'Teste animal perdido', 'perdeuse emtallugar', '5kg', 'curta', 'Médio', 'banner-1.jpg', 'Gato');
 
 -- --------------------------------------------------------
 
@@ -98,7 +85,14 @@ CREATE TABLE IF NOT EXISTS `perdidos` (
   `cidade` varchar(100) NOT NULL,
   `status` int(11) NOT NULL,
   PRIMARY KEY (`perdido_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Extraindo dados da tabela `perdidos`
+--
+
+INSERT INTO `perdidos` (`perdido_id`, `usuario_id`, `animal_id`, `local`, `cidade`, `status`) VALUES
+(1, 1, 15, 'na rua', 'Franca', 0);
 
 -- --------------------------------------------------------
 
@@ -123,14 +117,15 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `senha` varchar(50) NOT NULL,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`usuario_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Extraindo dados da tabela `usuarios`
 --
 
 INSERT INTO `usuarios` (`usuario_id`, `nome`, `cpf`, `rg`, `dataNascimento`, `endereco`, `bairro`, `cidade`, `estado`, `cep`, `telefone`, `celular`, `email`, `senha`, `status`) VALUES
-(1, 'Gustavo', 'fsdfsdf', 'dsfsdf', '2014-08-23', 'sdfsd', 'fdsf', 'sdsd', 'dsfsdfsdf', 'sdfsdf', 'sdfsdf', 'sdf', '1', '1', 1);
+(1, 'Gustavo', 'fsdfsdf', 'dsfsdf', '2014-08-23', 'sdfsd', 'fdsf', 'sdsd', 'dsfsdfsdf', 'sdfsdf', 'sdfsdf', 'sdf', '1', '1', 1),
+(2, 'gdfg', 'dfgdsfgdf', 'gdfgdfsg', '2014-08-19', 'dfgdsfg', 'dfgdfg', 'dfgf', 'dfgdfg', 'fgsdfgd', 'fgdfgdfg', 'dfg', '2', '2', 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
