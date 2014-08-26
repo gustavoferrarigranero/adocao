@@ -1,5 +1,5 @@
 <div id="footer">
-Sistema de adoção de animais de estimação 2014&reg;
+Sistema de adoção de animais de estimação 2014&reg; Desenvolvido por Lucas e Leonardo
 </div>
 </div>
 <br /><br /><br />

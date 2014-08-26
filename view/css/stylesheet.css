@@ -8,6 +8,7 @@ body{
 *{
 	font-size:12px;	
 }
+h1{font-size:20px;}
 a{
 	text-decoration:none;
 }
@@ -136,7 +137,29 @@ a:hover{
 	float:right;
 	padding:5px;
 }
-
+.like{
+	float:right;
+	text-align:left;
+	font-weight:bold;
+	font-size:18px;
+	color:#00B200;	
+	width:50px;
+	height:20px;
+	line-height:20px;
+	background:url(../imagens/like.png) no-repeat right center;
+}
+.deslike{
+	float:right;
+	text-align:right;
+	font-weight:bold;
+	font-size:18px;
+	color:#FF0000;	
+	width:50px;
+	height:20px;
+	line-height:20px;
+	background:url(../imagens/deslike.png) no-repeat left center;
+	margin-left:10px;
+}
 
 
 

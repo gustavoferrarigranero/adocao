@@ -1,9 +1,5 @@
 <?php
 require_once("conf.php");
-if(!isset($_SESSION['usuario'])){
-	header("Location: ". URL.'login.php');
-	exit();
-}
 
 require_once("controller/PerdidoController.php");
 $perdidoController = new PerdidoController();
@@ -71,6 +67,10 @@ require_once("view/header.php");
             	<strong>Foto:</strong> <br />
             	<img src="<?php echo URL ?>admin/app/webroot/imagens/<?php echo $perdido['foto'] ; ?>" width="200" />
 			<?php } ?>
+            <br />
+            <br />
+            <br />
+            <a href="<?php echo URL ; ?>visualizar.php?tipo=perdido&id=<?php echo $perdido['perdido_id'] ; ?>">veja mais!</a>
             <hr />
             <br /><br /><br /><br />
         </div>
