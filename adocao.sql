@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 25-Ago-2014 às 04:53
+-- Generation Time: 26-Ago-2014 às 02:44
 -- Versão do servidor: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -74,6 +74,31 @@ INSERT INTO `animais` (`animal_id`, `nome`, `descricao`, `peso`, `pelagem`, `tam
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `depoimentos`
+--
+
+CREATE TABLE IF NOT EXISTS `depoimentos` (
+  `depoimento_id` int(11) NOT NULL AUTO_INCREMENT,
+  `animal_id` int(11) NOT NULL,
+  `usuario_id` int(11) NOT NULL,
+  `texto` text NOT NULL,
+  `like` int(11) NOT NULL,
+  `deslike` int(11) NOT NULL,
+  PRIMARY KEY (`depoimento_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Extraindo dados da tabela `depoimentos`
+--
+
+INSERT INTO `depoimentos` (`depoimento_id`, `animal_id`, `usuario_id`, `texto`, `like`, `deslike`) VALUES
+(1, 13, 1, 'gsfsfsdfdsf', 18, 4),
+(2, 13, 1, 'Teste de Depoimento, ele foi bem cuidado blab bla bla blasaakjshjhASKJHKJcuidado blab bla bla blasaakjshjhASKJHKJcuidado blab bla bla blasaakjshjhASKJHKJcuidado blab bla bla blasaakjshjhASKJHKJ', 11, 7),
+(3, 13, 1, 'ighskdhjaskdlasd', 1, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `perdidos`
 --
 
@@ -92,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `perdidos` (
 --
 
 INSERT INTO `perdidos` (`perdido_id`, `usuario_id`, `animal_id`, `local`, `cidade`, `status`) VALUES
-(1, 1, 15, 'na rua', 'Franca', 0);
+(1, 1, 15, 'na rua', 'Franca', 1);
 
 -- --------------------------------------------------------
 
