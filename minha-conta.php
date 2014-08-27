@@ -47,7 +47,7 @@ require_once("view/header.php");
     	<table>
         	<tr>
             	<td valign="top">
-                	<input type="hidden" name="id" value="<?php echo $_SESSION['usuario']['id'] ?>" />
+                	<input type="hidden" name="usuario_id" value="<?php echo $_SESSION['usuario']['usuario_id'] ?>" />
                     <input type="hidden" name="status" value="1" />
                     Nome: <br /><input type="text" name="nome" value="<?php echo $_SESSION['usuario']['nome'] ?>" /><br /><br />
                     CPF(maiores de 16 anos): <br /><input type="text" name="cpf" value="<?php echo $_SESSION['usuario']['cpf'] ?>" maxlength="11" />(apenas numeros)<br /><br />

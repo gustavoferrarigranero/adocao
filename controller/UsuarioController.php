@@ -23,7 +23,7 @@ class UsuarioController{
 		
 		if($this->usuarioModel->alterar($dados)){
 			$_SESSION['sucesso'] = "Dados alterados com sucesso!";
-			$_SESSION['usuario'] = $this->usuarioModel->retornaUsuario($_SESSION['usuario']['id'])->row;
+			$_SESSION['usuario'] = $this->usuarioModel->retornaUsuario($_SESSION['usuario']['usuario_id'])->row;
 		}
 	}
 	

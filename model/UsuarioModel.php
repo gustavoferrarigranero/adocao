@@ -16,13 +16,13 @@ class UsuarioModel{
 	
 	public function alterar($dados = array()){
 		
-		return $this->connection->query("UPDATE `usuarios` SET `nome` = '".$this->connection->escape($dados['nome'])."', `cpf` = '".$this->connection->escape($dados['cpf'])."', `rg` = '".$this->connection->escape($dados['rg'])."', `dataNascimento` = '".$this->connection->escape($dados['dataNascimento'])."', `endereco` = '".$this->connection->escape($dados['endereco'])."', `bairro` = '".$this->connection->escape($dados['bairro'])."', `cidade` = '".$this->connection->escape($dados['cidade'])."', `estado` = '".$this->connection->escape($dados['estado'])."', `cep` = '".$this->connection->escape($dados['cep'])."', `telefone` = '".$this->connection->escape($dados['telefone'])."', `celular` = '".$this->connection->escape($dados['celular'])."', `email` = '".$this->connection->escape($dados['email'])."', `senha` = '".$this->connection->escape($dados['senha'])."', `status` = '".(int)$dados['status']."' WHERE id = ".(int)$dados['id'].";");
+		return $this->connection->query("UPDATE `usuarios` SET `nome` = '".$this->connection->escape($dados['nome'])."', `cpf` = '".$this->connection->escape($dados['cpf'])."', `rg` = '".$this->connection->escape($dados['rg'])."', `dataNascimento` = '".$this->connection->escape($dados['dataNascimento'])."', `endereco` = '".$this->connection->escape($dados['endereco'])."', `bairro` = '".$this->connection->escape($dados['bairro'])."', `cidade` = '".$this->connection->escape($dados['cidade'])."', `estado` = '".$this->connection->escape($dados['estado'])."', `cep` = '".$this->connection->escape($dados['cep'])."', `telefone` = '".$this->connection->escape($dados['telefone'])."', `celular` = '".$this->connection->escape($dados['celular'])."', `email` = '".$this->connection->escape($dados['email'])."', `senha` = '".$this->connection->escape($dados['senha'])."', `status` = '".(int)$dados['status']."' WHERE usuario_id = ".(int)$dados['usuario_id'].";");
 		
 	}
 	
 	public function excluir($dados = array()){
 		
-		return $this->connection->query("DELETE FROM `usuarios` WHERE id = ".(int)$dados['id'].";");
+		return $this->connection->query("DELETE FROM `usuarios` WHERE usuario_id = ".(int)$dados['usuario_id'].";");
 		
 	}
 	
@@ -51,7 +51,7 @@ class UsuarioModel{
 	
 	public function retornaUsuario($id){
 		
-		return $dados = $this->connection->query("SELECT * FROM `usuarios` WHERE id = '".(int)$id."' LIMIT 1") ;
+		return $dados = $this->connection->query("SELECT * FROM `usuarios` WHERE usuario_id = '".(int)$id."' LIMIT 1") ;
 		
 	}
 	
