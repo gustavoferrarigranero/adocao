@@ -64,7 +64,7 @@ a:hover{
 }
 #centro #meio{
 	width:1003px;
-	height:400px;	
+	min-height:400px;	
 	background:#FFF;
 	position:relative;
 }
@@ -86,6 +86,7 @@ a:hover{
 }
 #centro #meio .coluna .texto{
 	margin:5px 0px 0px 0px;
+	min-height:120px;
 	text-align:justify;
 	font-size:11px;
 	font-weight:bold;
@@ -161,6 +162,25 @@ a:hover{
 	margin-left:10px;
 }
 
+.filtros{
+	min-height:50px;
+	padding:20px;	
+}
+.filtros .titulo{
+	color:#FF8204;
+	font-size:18px;	
+}
+.filtro{
+	float:left;
+	margin:20px 5px;
+	padding:20px 10px;	
+}
+.filtro-button{
+	float:left;
+	margin:20px 5px;
+	padding:20px 10px;	
+	margin-left:25px;
+}
 
 
 

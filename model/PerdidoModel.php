@@ -36,6 +36,12 @@ class PerdidoModel{
 		
 		return $this->connection->query("SELECT a.`perdido_id`,a.`usuario_id`,a.`local`,a.`cidade`, a.`status`,an.* FROM `perdidos` a INNER JOIN animais an ON an.animal_id=a.animal_id");
 		
+	}
+	
+	public function isAdocao($animal_id){
+		
+		return $this->connection->query("SELECT a.`perdido_id`,a.`usuario_id`,a.`local`,a.`cidade`, a.`status`,an.* FROM `perdidos` a INNER JOIN animais an ON an.animal_id=a.animal_id WHERE a.animal_id = ".(int)$animal_id."");
+		
 	}	
 	
 	public function avisar($perdido_id){

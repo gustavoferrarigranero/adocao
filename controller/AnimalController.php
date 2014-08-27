@@ -31,7 +31,13 @@ class AnimalController{
 	
 	public function listar($dados = array()){
 		
-		$this->animalModel->listar($dados);
+		return $this->animalModel->listar($dados);
+		
+	}
+	
+	public function listarFiltro($filtro){
+		
+		return $this->animalModel->listarFiltro($filtro);
 		
 	}
 	

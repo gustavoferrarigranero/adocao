@@ -53,7 +53,7 @@ require_once("view/header.php");
             <span>
             <?php if($adocao['status']==1){ ?>
             	Animal ja adotado! 
-                <?php if($adocao['usuario_id'] == $_SESSION['usuario']['usuario_id']){ ?>
+                <?php if(isset($_SESSION['usuario']) && $adocao['usuario_id'] == $_SESSION['usuario']['usuario_id']){ ?>
                 Para cancelar sua adoção clique <a href="<?php echo URL ; ?>adocoes.php?cancela_adocao_id=<?php echo $adocao['adocao_id'] ; ?>">aqui!</a>
                 <?php } ?>
             <?php }else{ ?>

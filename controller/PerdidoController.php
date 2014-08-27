@@ -50,6 +50,12 @@ class PerdidoController{
 		
 	}
 	
+	public function isAdocao($animal_id){
+		
+		return $this->perdidoModel->isAdocao($animal_id);
+		
+	}
+	
 	public function get($perdido_id){
 		
 		return $this->perdidoModel->get($perdido_id);

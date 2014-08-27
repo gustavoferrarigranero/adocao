@@ -50,6 +50,12 @@ class AdocaoController{
 		
 	}
 	
+	public function isAdocao($animal_id){
+		
+		return $this->adocaoModel->isAdocao($animal_id);
+		
+	}
+	
 	public function get($adocao_id){
 		
 		return $this->adocaoModel->get($adocao_id);

@@ -32,6 +32,12 @@ class AnimalModel{
 		
 	}
 	
+	public function listarFiltro($filtro){
+		
+		return $this->connection->query("SELECT * FROM `animais` a WHERE a.animal_id IS NOT NULL ".$filtro);
+		
+	}
+	
 	public function foto($dados = array()){
 		
 		return $this->connection->query("UPDATE `animais` SET `foto` = '".$this->connection->escape($dados['foto'])."'  WHERE animal_id = ".(int)$dados['animal_id'].";");

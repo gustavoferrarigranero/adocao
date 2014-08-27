@@ -53,7 +53,7 @@ require_once("view/header.php");
             <span>
             <?php if($perdido['status']==1){ ?>
             	Animal Encontrado! 
-                <?php if($perdido['usuario_id'] == $_SESSION['usuario']['usuario_id']){ ?>
+                <?php if(isset($_SESSION['usuario']) && $perdido['usuario_id'] == $_SESSION['usuario']['usuario_id']){ ?>
                 Para marcar como desaparecido novamente clique <a href="<?php echo URL ; ?>perdidos.php?cancela_perdido_id=<?php echo $perdido['perdido_id'] ; ?>">aqui!</a>
                 <?php } ?>
             <?php }else{ ?>
