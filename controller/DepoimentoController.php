@@ -29,9 +29,9 @@ class DepoimentoController{
 		
 	}
 	
-	public function listar($dados = array()){
+	public function listar($depoimento_id){
 		
-		return $this->depoimentoModel->listar($dados);
+		return $this->depoimentoModel->listar($depoimento_id);
 		
 	}
 	

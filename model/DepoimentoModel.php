@@ -32,9 +32,9 @@ class DepoimentoModel{
 		
 	}
 	
-	public function listar($dados = array()){
+	public function listar($animal_id){
 		
-		return $this->connection->query("SELECT d.`depoimento_id`,d.`usuario_id`,d.`texto`,d.`like`,d.`deslike`,u.nome  FROM `depoimentos` d INNER JOIN usuarios u ON d.usuario_id=u.usuario_id");
+		return $this->connection->query("SELECT d.`depoimento_id`,d.`usuario_id`,d.`texto`,d.`like`,d.`deslike`,u.nome  FROM `depoimentos` d INNER JOIN usuarios u ON d.usuario_id=u.usuario_id WHERE d.animal_id = ".(int)$animal_id);
 		
 	}	
 	

@@ -118,7 +118,7 @@ require_once("view/header.php");
     <h1>Depoimentos</h1>
     <?php
 
-	$depoimentos = $depoimentoController->listar(array());
+	$depoimentos = $depoimentoController->listar($info['animal_id']);
 	
 	if($depoimentos->num_rows){
 		foreach($depoimentos->rows as $depoimento){
